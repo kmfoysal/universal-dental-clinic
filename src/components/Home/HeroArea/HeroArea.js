@@ -14,6 +14,7 @@ const HeroArea = () => {
                             <p className='text-lg text-gray-400 mb-8'>General, Cosmetic, and Restorative Dentistry</p>
                             <button className='py-4 px-10 text-white rounded-full bg-gradient-to-r from-purple-500 to-indigo-500'>Book Appointment</button>
                             <img src={shades} alt="" className='w-3/5 mx-auto' />
+                            
                         </div>
                     </div>
                 </div>
