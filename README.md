@@ -9,5 +9,5 @@ Live Website Link : [UNIVERSAL DENTAL CARE](https://universal-dental-clinic.web.
 <li>Know about services</li>
 <li>Private Routing</li>
 <li>Know sevice procrdure</li>
-<li>Book appointment in online</li>
+<li>Know Appointment Info</li>
 </ul>

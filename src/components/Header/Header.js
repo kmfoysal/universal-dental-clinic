@@ -8,13 +8,11 @@ const Header = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div className="container lg:px-24">
-                    <NavLink to='/'>
-                    <a className="navbar-brand d-flex items-center text-primary font-semibold" href="#">
+                    <NavLink className="navbar-brand d-flex items-center text-primary font-semibold" to='/'>
                     <img src={logo} alt="" width="30" height="24" class="d-inline-block align-text-top mr-2"/>
                         Universal Dental
-                    </a>
                     </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

@@ -21,7 +21,7 @@ const ServiceDetails = () => {
 
                 <p className='text-2xl font-semibold text-purple-500 mt-4'>Start From ${singleDetails?.price}</p>
 
-                <Link to='/'>
+                <Link to='/contact'>
                   <button className='py-3 px-12 text-white rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 mt-4'>Contact Now</button>
                 </Link>
             </div>

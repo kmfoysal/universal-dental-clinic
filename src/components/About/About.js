@@ -1,5 +1,6 @@
 import { CheckIcon } from '@heroicons/react/solid';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import dentist from '../../images/sergon.jpg';
 
 
@@ -11,7 +12,7 @@ const About = () => {
                 <div className='lg:pl-32 px-4 text-center lg:text-left'>
                     <h3 className='text-4xl font-medium leading-normal mb-8'>Our Practice & Core Values</h3>
                     <p className='text-lg text-gray-500 mb-4'>Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibu. Aenean lacinia bibendum nulla sed. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibu.</p>
-                    <button className='py-4 px-10 text-white rounded-full bg-gradient-to-r from-purple-500 to-indigo-500'>Book Appointment</button>
+                    <Link to='/contact'><button className='py-4 px-10 text-white rounded-full bg-gradient-to-r from-purple-500 to-indigo-500'>Book Appointment</button></Link>
                 </div>
                 <div>
                     <img src={dentist} alt="img" className='rounded-tl-full rounded-bl-full' />

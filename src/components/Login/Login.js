@@ -1,13 +1,28 @@
 import React from 'react';
+import { useHistory, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const {signInWithGoogle, handleSignUp,isLogin,handleEmail,handlePassword,toggleLogin,handleResetPassword,error} = useAuth();
+
+    // For redirect expected page 
+    const location = useLocation();
+    const history = useHistory()
+    const redirect_url = location.state?.from || '/home'
+
+    const handleGoogleLogin = (event) =>{
+        event.preventDefault();
+        signInWithGoogle()
+        .then(result =>{
+            history.push(redirect_url)
+        })
+    }
     
     return (
         <div className='container py-5'>
 
-        <form className='lg:w-2/4 mx-auto bg-white p-8 rounded-xl' onSubmit={handleSignUp}>
+        <form className='lg:w-2/4 mx-auto bg-white p-8 rounded-xl shadow-2xl mt-5' onSubmit={handleSignUp}>
           <h2 className='text-4xl font-semibold text-center text-purple-500 mb-8'>Please {isLogin ? 'Login' : "Signup"}</h2>
           <div className="form-floating mb-3"> 
               <input onBlur={handleEmail} type="email" className="form-control" id="inputEmail" placeholder='Please Enter Your Email'/>
@@ -24,14 +39,14 @@ const Login = () => {
               Do you have account ?
             </label>
           </div>
-          <a href="" onClick={handleResetPassword}>{isLogin ? 'Reset Password' : ""}</a>
+          <Link to="" onClick={handleResetPassword}>{isLogin ? 'Reset Password' : ""}</Link>
           <button type="submit" className='py-3 px-10 text-white rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 lg:mt-0 mt-2'>{isLogin ? 'Login':'Signup'}</button>
           </div>
           <div>
             <p className='text-danger'>{error}</p>
           </div>
 
-          <button onClick={signInWithGoogle} className='btn btn-danger btn-lg mt-2 w-100'>Signin With Google</button>
+          <button onClick={handleGoogleLogin} className='btn btn-danger btn-lg mt-2 w-100'>Signin With Google</button>
           
         </form>
         </div>
