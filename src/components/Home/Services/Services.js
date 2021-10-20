@@ -5,9 +5,9 @@ import Service from '../../Service/Service';
 const Services = () => {
     const [services] = useServices();
     return (
-        <div className='container py-20 lg:px-24 sm:px-4 mx-auto'>
+        <div className='container py-10 lg:py-20 lg:px-24 sm:px-3 mx-auto'>
 
-            <h3 className=' sm:text-5xl lg:text-5xl text-center font-medium mb-4'>Our Comprehensive Dental Services</h3>
+            <h3 className='text-3xl lg:text-5xl text-center font-medium mb-4'>Our Comprehensive Dental Services</h3>
             <p className='text-lg text-center text-gray-400 mb-12'>General, Cosmetic, and Restorative Care</p>
 
             <div className='grid lg:grid-cols-3 gap-8 sm:grid-flow-row'>

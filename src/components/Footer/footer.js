@@ -6,7 +6,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className='footer'>
-            <div className='container py-12 px-8 w-4/5 rounded-tl-full rounded-tr-full mx-auto bg-gradient-to-r from-purple-500 to-indigo-500'>
+            <div className='container py-20 lg:py-12 px-8 lg:w-4/5 w-11/12 rounded-tl-full rounded-tr-full mx-auto bg-gradient-to-r from-purple-500 to-indigo-500'>
             <div className='grid lg:grid-cols-3 sm:grid-flow-row gap-4 '>
                 <div className='flex text-white text-xl font-semibold mx-auto'>
                    <PhoneIcon className='w-8 h-8 mr-5' />
